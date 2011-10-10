@@ -1,0 +1,31 @@
+!!! 5
+html(class='no-js', lang='en')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		
+		script(id='page-template',type='text/x-jquery-tmpl')
+			span <%= title %>
+			
+		script(id='list-template',type='text/x-jquery-tmpl')
+			h1 list of pages
+			ul.list
+			form(action='')
+				input#title(type='text')
+				a#add(href='#') here
+			
+
+				
+	body
+		#container!= body
+		script(type='text/javascript', src='/javascripts/modernizr-2.0.6.min.js')
+		script(type='text/javascript', src='/javascripts/jquery-1.6.2.min.js')
+		script(type='text/javascript', src='/javascripts/underscore-min.js')
+		script(type='text/javascript', src='/javascripts/backbone-min.js')
+		script(type='text/javascript', src='/javascripts/elevate.js')
+		script(type='text/javascript')
+			jQuery(function() {
+				window.library.fetch();
+			});

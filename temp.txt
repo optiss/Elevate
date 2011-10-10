@@ -1,0 +1,24 @@
+
+
+//
+	#header
+	#container
+	script(type='text/javascript')
+		var target = document.getElementById('container');
+		// var spinner = new Spinner(opts).spin(target);
+
+
+	
+	script(type='text/javascript')
+		// spinner.stop();
+		
+		
+		
+		Backbone.sync = function(method, model) {
+		  alert(method + ": " + model.url);
+		};
+
+		var Pages = new Backbone.Collection;
+		Pages.url = '/pages';
+
+		Pages.fetch();

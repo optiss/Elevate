@@ -1,0 +1,6 @@
+h2 Edit Page
+form(method='post', action='/pages')
+	input(name='page[id]', value=p.id, type='hidden')
+	input(name='_method', value='PUT', type='hidden')
+	input(name='page[title]', value=p.title || '')
+	input(type='submit', value='Save')
